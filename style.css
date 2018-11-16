@@ -1,0 +1,42 @@
+.border{
+    border: 1px solid black;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+#canvas{
+    align-content: center;
+}
+
+#canvasDiv{
+    padding:3%;
+}
+
+.button-bars
+{
+    align-content: center;
+    text-align: center;
+}
+
+#clear , #save{
+    line-height: 20px;
+    border-radius:8px;
+    text-align: center;
+    background-color:red;
+    color:#fff;
+    padding:5px;
+    margin:10px 30px;
+    
+}
+
+#save{
+    background-color: green;
+}
+
+#savedImg
+{
+    display:block;
+    margin:40px auto;
+}
