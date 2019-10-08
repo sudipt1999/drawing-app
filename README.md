@@ -2,7 +2,7 @@
 
 This is a web based drawing application that uses **`HTML`**, **`CSS`** and **`JavaScript`** to allow you to draw anything you like on the web!
 
-[Click here]("https://sudipt1999.github.io/drawing-app/") to start drawing.
+[Click here](https://sudipt1999.github.io/drawing-app/) to start drawing.
 
 ![Drawing App Screenshot](drawing-app-screenshot.png)
 
