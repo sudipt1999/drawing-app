@@ -28,7 +28,6 @@ body{
     color:#fff;
     padding:5px;
     margin:10px 30px;
-    
 }
 
 #save{
@@ -39,4 +38,41 @@ body{
 {
     display:block;
     margin:40px auto;
+}
+
+#outer-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#onstart-popup {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 50px;
+    top: 50px;
+    display: block;
+    width: 70%;
+    max-width: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 20px;
+    background: white;
+}
+
+#onstart-popup > div {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#onstart-popup > div:hover {
+    cursor: pointer;
+    color: darkred;
 }

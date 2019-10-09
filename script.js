@@ -1,7 +1,14 @@
 console.log("starting the app!");
 
+const closePopup = () => {
+    var popup = document.querySelector("#onstart-popup");
+    var outer = document.querySelector("#outer-popup");
+    popup.style.display = "none";
+    outer.style.display = "none";
+}
+
 //creating a canvas
-const createCanvas=()=>{
+const createCanvas = () =>{
         const canvasDiv = document.querySelector("#canvasDiv");
         const canvas = document.createElement('canvas');
         const clearBtn=document.getElementById('clear');

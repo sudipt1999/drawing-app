@@ -17,8 +17,18 @@
     <div id="img-container">
         <img id="savedImg" alt="saved picture" src="">
     </div>
+
+    <!-- Popup at the start -->
+    <div onclick="closePopup()" id="outer-popup"></div>
+    <div id="onstart-popup">
+        <h2>Drawing App</h2>
+        <p>
+            Welcome to the Drawing App. Click on the canvas to draw, click the clear button to clear the canvas, 
+            and click the save button to save your drawing. Have fun!
+        </p>
+        <div onclick="closePopup()">&times;</div>
+    </div>
 </body>
 
 <script src="script.js"></script>
-
 </html>
