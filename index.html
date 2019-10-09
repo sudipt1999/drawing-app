@@ -1,34 +1,35 @@
-<!doctypehtml>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>SketchToPhoto</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-</head>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!--CODE TO BE WRITTEN HERE--->
     <!--creating a div for canvas where drawing is to be made-->
     <div id="canvasDiv"></div>
     <div class="button-bars">
-        <button id="clear">CLEAR</button>
-        <button id="save">SAVE</button>
+      <button id="erase">ERASE</button>
+      <button id="clear">CLEAR</button>
+      <button id="save">SAVE</button>
     </div>
     <div id="img-container">
-        <img id="savedImg" alt="saved picture" src="">
+      <img id="savedImg" alt="saved picture" src="" />
     </div>
 
     <!-- Popup at the start -->
     <div onclick="closePopup()" id="outer-popup"></div>
     <div id="onstart-popup">
-        <h2>Drawing App</h2>
-        <p>
-            Welcome to the Drawing App. Click on the canvas to draw, click the clear button to clear the canvas, 
-            and click the save button to save your drawing. Have fun!
-        </p>
-        <div onclick="closePopup()">&times;</div>
+      <h2>Drawing App</h2>
+      <p>
+        Welcome to the Drawing App. Click on the canvas to draw, click the clear
+        button to clear the canvas, and click the save button to save your
+        drawing. Have fun!
+      </p>
+      <div onclick="closePopup()">&times;</div>
     </div>
-</body>
+  </body>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </html>
