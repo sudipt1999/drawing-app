@@ -1,34 +1,38 @@
-<!doctypehtml>
-<html>
-
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SketchToPhoto</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-</head>
 
-<body>
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="styles/general.css" />
+  </head>
+  <body>
     <!--CODE TO BE WRITTEN HERE--->
     <!--creating a div for canvas where drawing is to be made-->
     <div id="canvasDiv"></div>
     <div class="button-bars">
-        <button id="clear">CLEAR</button>
-        <button id="save">SAVE</button>
+      <button id="clear">CLEAR</button>
+      <button id="save">SAVE</button>
     </div>
     <div id="img-container">
-        <img id="savedImg" alt="saved picture" src="">
+      <img id="savedImg" alt="saved picture" src="" />
     </div>
 
     <!-- Popup at the start -->
-    <div onclick="closePopup()" id="outer-popup"></div>
+    <div id="outer-popup"></div>
     <div id="onstart-popup">
-        <h2>Drawing App</h2>
-        <p>
-            Welcome to the Drawing App. Click on the canvas to draw, click the clear button to clear the canvas, 
-            and click the save button to save your drawing. Have fun!
-        </p>
-        <div onclick="closePopup()">&times;</div>
+      <h2>Drawing App</h2>
+      <p>
+        Welcome to the Drawing App. Click on the canvas to draw, click the clear
+        button to clear the canvas, and click the save button to save your
+        drawing. Have fun!
+      </p>
+      <div id="popup-close">&times;</div>
     </div>
-</body>
 
-<script src="script.js"></script>
+    <script src="./dist/main.js"></script>
+  </body>
 </html>
