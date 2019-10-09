@@ -12,6 +12,7 @@ const createCanvas = () => {
   const canvasDiv = document.querySelector('#canvasDiv');
   const canvas = document.createElement('canvas');
   const clearBtn = document.getElementById('clear');
+  const eraseBtn = document.getElementById('erase');
   const saveBtn = document.getElementById('save');
   let canvasHeight = window.innerHeight - 100;
   let canvasWidth = window.innerWidth - 100;
@@ -19,6 +20,9 @@ const createCanvas = () => {
   var clickY = new Array();
   var clickDrag = new Array();
   var paint;
+  var eraser = false;
+  var clickColor = new Array();
+  var strokeColor = '#000';
 
   clearBtn.addEventListener('click', function(e) {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
@@ -46,12 +50,15 @@ const createCanvas = () => {
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
+    if (eraser) {
+      clickColor.push('white');
+    } else {
+      clickColor.push(strokeColor);
+    }
   }
 
   function redraw() {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
-    context.fillStyle = '#fff';
-    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
     context.strokeStyle = '#000';
     context.lineJoin = 'round';
     context.lineWidth = 5;
@@ -65,6 +72,7 @@ const createCanvas = () => {
       }
       context.lineTo(clickX[i], clickY[i]);
       context.closePath();
+      context.strokeStyle = clickColor[i];
       context.stroke();
     }
   }
@@ -75,10 +83,11 @@ const createCanvas = () => {
     savedImg.setAttribute('src', dataURL);
   });
 
-  canvas.addEventListener('mousedown', function(e) {
-    var mouseX = e.pageX - this.offsetLeft;
-    var mouseY = e.pageY - this.offsetTop;
+  eraseBtn.addEventListener('click', () => {
+    eraser = !eraser;
+  });
 
+  canvas.addEventListener('mousedown', function(e) {
     paint = true;
     addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
     redraw();
@@ -93,6 +102,7 @@ const createCanvas = () => {
 
   canvas.addEventListener('mouseup', function(e) {
     paint = false;
+    redraw();
   });
 };
 
