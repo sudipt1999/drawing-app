@@ -13,8 +13,8 @@ const createCanvas = () =>{
         const canvas = document.createElement('canvas');
         const clearBtn=document.getElementById('clear');
         const saveBtn = document.getElementById('save');
-        let canvasHeight = window.innerHeight-100;
-        let canvasWidth  = window.innerWidth-100;
+        let canvasHeight = window.innerHeight-250;
+        let canvasWidth  = window.innerWidth-400;
         var clickX = new Array();
         var clickY = new Array();
         var clickDrag = new Array();
