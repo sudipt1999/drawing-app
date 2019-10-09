@@ -8,16 +8,25 @@
 
 <body>
     <!--CODE TO BE WRITTEN HERE--->
-    <!--creating a div for canvas where drawing is to be made-->
-    <div id="canvasDiv"></div>
-    <div class="button-bars">
-        <button id="clear">CLEAR</button>
-        <button id="save">SAVE</button>
-    </div>
-    <div id="img-container">
-        <img id="savedImg" alt="saved picture" src="">
+    <div class="header">
+        <nav class="navbar">
+            <h2 class="brand"> SketchToPhoto</h2>
+            <img class="logo" src="./SVG/logo.svg" alt="" srcset="">
+            <div class="button"> <span>Download</span> </div>
+        </nav>
+
+        <!--creating a div for canvas where drawing is to be made-->
+        <div id="canvasDiv"></div>
+
+        <div class="button-bars">
+            <button id="clear">Clear</button>
+            <button id="save">Save</button>
+          </div> 
     </div>
 
+          <div id="img-container">
+             <img id="savedImg" alt="" src="">
+           </div>
     <!-- Popup at the start -->
     <div onclick="closePopup()" id="outer-popup"></div>
     <div id="onstart-popup">
