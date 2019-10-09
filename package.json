@@ -1,0 +1,15 @@
+{
+  "name": "drawing-app",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && rollup -c",
+    "watch": "npm run clean && rollup -cw"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3"
+  }
+}
