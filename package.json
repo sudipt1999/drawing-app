@@ -11,8 +11,5 @@
     "@babel/preset-env": "^7.6.3",
     "rollup": "^1.23.1",
     "rollup-plugin-babel": "^4.3.3"
-  },
-  "dependencies": {
-    "systemjs": "^6.1.3"
   }
 }
