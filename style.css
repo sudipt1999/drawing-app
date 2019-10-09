@@ -76,3 +76,13 @@ body{
     cursor: pointer;
     color: darkred;
 }
+.color-box{
+    text-align: center;
+    margin-top: 20px;
+}
+.color-box label{
+    font-size: 26px;
+}
+#color-picker{
+    width: 100px;
+}

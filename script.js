@@ -53,10 +53,11 @@ const createCanvas = () =>{
                 }
 
                 function redraw(){
+                        const color = document.getElementById('color-picker').value
                         context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
                         context.fillStyle="#fff";
                         context.fillRect(0,0,context.canvas.width, context.canvas.height);
-                        context.strokeStyle = "#000";
+                        context.strokeStyle = color;
                         context.lineJoin = "round";
                         context.lineWidth = 5;
                                               
