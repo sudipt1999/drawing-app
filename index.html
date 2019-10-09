@@ -3,20 +3,43 @@
 
 <head>
     <title>SketchToPhoto</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Raleway&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!--CODE TO BE WRITTEN HERE--->
+        <div class="header">
+            <nav class="navbar">
+                <h2 class="brand"> SketchToPhoto</h2>
+                <img class="logo" src="./SVG/logo.svg" alt="" srcset="">
+                <div class="button"> <span>Download</span> </div>
+            </nav>
+
+            <div id="canvasDiv"></div>
+
+            <div class="button-bars">
+                <button id="clear">Clear</button>
+                <button id="save">Save</button>
+              </div> 
+        </div>
+  
+              <div id="img-container">
+                 <img id="savedImg" alt="" src="">
+               </div>
+           
+            
+    
+
     <!--creating a div for canvas where drawing is to be made-->
-    <div id="canvasDiv"></div>
+    <!-- <div id="canvasDiv"></div>
     <div class="button-bars">
         <button id="clear">CLEAR</button>
         <button id="save">SAVE</button>
     </div>
     <div id="img-container">
         <img id="savedImg" alt="saved picture" src="">
-    </div>
+    </div> -->
 </body>
 
 <script src="script.js"></script>
