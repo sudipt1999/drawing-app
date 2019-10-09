@@ -23,6 +23,7 @@ const createCanvas = () => {
   var eraser = false;
   var clickColor = new Array();
   var strokeColor = '#000';
+  var fillColor = '#fff';
 
   clearBtn.addEventListener('click', function(e) {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
@@ -43,7 +44,7 @@ const createCanvas = () => {
     canvas = G_vmlCanvasManager.initElement(canvas);
   }
   context = canvas.getContext('2d');
-  context.fillStyle = '#fff';
+  context.fillStyle = fillColor;
   context.fillRect(0, 0, context.canvas.width, context.canvas.height);
 
   function addClick(x, y, dragging) {
@@ -51,7 +52,7 @@ const createCanvas = () => {
     clickY.push(y);
     clickDrag.push(dragging);
     if (eraser) {
-      clickColor.push('white');
+      clickColor.push(fillColor);
     } else {
       clickColor.push(strokeColor);
     }
@@ -59,7 +60,7 @@ const createCanvas = () => {
 
   function redraw() {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
-    context.strokeStyle = '#000';
+    context.strokeStyle = strokeColor;
     context.lineJoin = 'round';
     context.lineWidth = 5;
 
