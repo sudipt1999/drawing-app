@@ -12,9 +12,9 @@ Whenever you're finished with the current drawing, you can choose to either save
 
 ## How does it work?
 The application utilizes **`HTML`**, **`CSS`** and **`JavaScript`** in different ways.
-**`HTML`** is used to initize the app by calling the **`scipt.js`** and **`style.css`** functions. The clear and save buttons are also set up here as well. 
-**`CSS`** is used to set canvas and startup popup styles (i.e. window size/positioning, font, buttons) -- how they visually look. 
-**`JavaScript`** is used to establish the app functionality (drawing, clearing/saving the picture, and the startup popup)
+* **`HTML`** is used to initize the app by calling the **`scipt.js`** and **`style.css`** functions. The clear and save buttons are also set up here as well. 
+* **`CSS`** is used to set canvas and startup popup styles (i.e. window size/positioning, font, buttons) -- how they visually look. 
+* **`JavaScript`** is used to establish the app functionality (drawing, clearing/saving the picture, and the startup popup)
 
 ## Contributing
 
