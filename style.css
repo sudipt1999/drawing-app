@@ -20,7 +20,7 @@ body{
     text-align: center;
 }
 
-#clear , #save{
+#clear , #save, #open-pallet {
     line-height: 20px;
     border-radius:8px;
     text-align: center;
@@ -32,6 +32,10 @@ body{
 
 #save{
     background-color: green;
+}
+
+#open-pallet {
+    background-color: blue;
 }
 
 #savedImg
@@ -76,3 +80,27 @@ body{
     cursor: pointer;
     color: darkred;
 }
+
+.color-selector {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.color {
+    margin: 0 10px;
+    padding: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.color:hover {
+    cursor: pointer;
+}
+
+[data-color=black] {background-color:#000000 !important}
+[data-color=red] {background-color:#ff2b2b !important}
+[data-color=blue] {background-color:#006eff !important}
+[data-color=green] {background-color:#baff33 !important}
+[data-color=purple] {background-color:#b700ff !important}
