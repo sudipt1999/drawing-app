@@ -20,7 +20,7 @@ body{
     text-align: center;
 }
 
-#clear , #save, #open-pallet {
+#clear , #save {
     line-height: 20px;
     border-radius:8px;
     text-align: center;
@@ -32,10 +32,6 @@ body{
 
 #save{
     background-color: green;
-}
-
-#open-pallet {
-    background-color: blue;
 }
 
 #savedImg
