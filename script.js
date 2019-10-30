@@ -13,12 +13,18 @@ const createCanvas = () =>{
         const canvas = document.createElement('canvas');
         const clearBtn=document.getElementById('clear');
         const saveBtn = document.getElementById('save');
+        const blackBtn = document.querySelector('div[data-color="black"]');
+        const greenBtn = document.querySelector('div[data-color="green"]');
+        const blueBtn = document.querySelector('div[data-color="blue"]');
+        const purpleBtn = document.querySelector('div[data-color="purple"]');
+        const redBtn = document.querySelector('div[data-color="red"]');
         let canvasHeight = window.innerHeight-100;
         let canvasWidth  = window.innerWidth-100;
         var clickX = new Array();
         var clickY = new Array();
         var clickDrag = new Array();
         var paint;
+        var color = '#000000';
 
         clearBtn.addEventListener('click', function(e){
                 context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
@@ -27,9 +33,6 @@ const createCanvas = () =>{
                 clickDrag=[];
                 paint=false;
         });
-
-        
-        
 
         canvas.setAttribute('id','canvas');
         canvas.setAttribute('width',canvasWidth);
@@ -45,6 +48,40 @@ const createCanvas = () =>{
         context.fillStyle="#fff";
         context.fillRect(0,0,context.canvas.width, context.canvas.height);
 
+                // changes the color state of the canvas based on box clicked in welcome modal
+                function selectColor(newColor) {
+                  switch(newColor) {
+                    case 'green':
+                      color = "#baff33";
+                      closePopup();
+                      break;
+                    case 'red':
+                      color = "#ff2b2b";
+                      closePopup();
+                      break;
+                    case 'purple':
+                      color = "#b700ff";
+                      closePopup();
+                      break;
+                    case 'blue':
+                      color = "#006eff";
+                      closePopup();
+                      break;
+                    case 'black':
+                    default:
+                      color = "#000000";
+                      closePopup();
+                      break;
+                  }
+                }
+
+                // add click listener for all color options in welcome modal
+                blackBtn.addEventListener('click', (event) => selectColor(event.target.dataset.color));
+                blueBtn.addEventListener('click', (event) => selectColor(event.target.dataset.color));
+                greenBtn.addEventListener('click', (event) => selectColor(event.target.dataset.color));
+                purpleBtn.addEventListener('click', (event) => selectColor(event.target.dataset.color));
+                redBtn.addEventListener('click', (event) => selectColor(event.target.dataset.color));
+
                 function addClick(x, y, dragging)
                 {
                   clickX.push(x);
@@ -56,7 +93,7 @@ const createCanvas = () =>{
                         context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
                         context.fillStyle="#fff";
                         context.fillRect(0,0,context.canvas.width, context.canvas.height);
-                        context.strokeStyle = "#000";
+                        context.strokeStyle = color;
                         context.lineJoin = "round";
                         context.lineWidth = 5;
                                               
